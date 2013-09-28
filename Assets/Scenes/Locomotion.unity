@@ -1930,7 +1930,7 @@ Rigidbody:
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1083760442
@@ -1959,6 +1959,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   directionDampTime: .25
+  gamecam: {fileID: 1787692210}
+  directionSpeed: 3
+  rotationDegreePerSecond: 120
 --- !u!114 &1083760444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,12 +1974,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on: 1
-  onlyInPlayMode: 0
+  onlyInPlayMode: 1
   sceneViewFollowers:
   - enable: 1
-    positionOffset: {x: 0, y: 2.08999991, z: 0}
+    positionOffset: {x: 0, y: 2, z: 0}
     enableFixedRotation: 1
-    fixedRotation: {x: 2, y: 90.0899963, z: 0}
+    fixedRotation: {x: 90, y: 0, z: 0}
     targetTransform: {fileID: 1083760439}
     size: 5.01999998
     orthographic: 0
@@ -3035,9 +3038,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 5
-  distanceUp: 2
+  distanceUp: 1.5
   smooth: 3
-  follow: {fileID: 0}
+  followXForm: {fileID: 0}
+  targetingTime: .5
+  camSmoothDampTime: .100000001
 --- !u!1 &1794320978
 GameObject:
   m_ObjectHideFlags: 0
